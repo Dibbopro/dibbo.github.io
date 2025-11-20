@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DreamVision - Minecraft Portfolio</title>
-  <link rel="icon" href="assets/logos/youtube-logo.png" type="image/x-icon">
+  <title>DreamVision - Minecraft Development Portfolio</title>
+  <link rel="icon" href="https://i.imgur.com/3QZJ3yE.png" type="image/x-icon">
   <style>
     /* === ULTRA PREMIUM STYLES === */
     :root {
@@ -358,6 +358,7 @@
       border: 1px solid rgba(255, 255, 255, 0.1);
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
       animation: cardFloat 6s ease-in-out infinite;
+      cursor: pointer;
     }
     
     .card:nth-child(2) {
@@ -416,6 +417,57 @@
     .card:hover img {
       transform: scale(1.1);
       filter: brightness(1.2) saturate(1.2);
+    }
+    
+    /* === IMAGE MODAL === */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      z-index: 2000;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .modal.active {
+      display: flex;
+      opacity: 1;
+    }
+    
+    .modal-content {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 15px;
+      box-shadow: 0 0 50px rgba(0, 255, 224, 0.5);
+      animation: modalZoom 0.3s ease;
+    }
+    
+    @keyframes modalZoom {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    
+    .close-modal {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      z-index: 2001;
+    }
+    
+    .close-modal:hover {
+      color: var(--primary);
+      transform: scale(1.2) rotate(90deg);
     }
     
     /* === SKILLS SHOWCASE === */
@@ -593,7 +645,7 @@
 <body>
   <nav>
     <div class="nav-brand">
-      <img src="assets/logos/youtube-logo.png" alt="Logo">
+      <img src="https://i.imgur.com/3QZJ3yE.png" alt="Logo">
       <h1>DreamVision</h1>
     </div>
     <div>
@@ -607,49 +659,53 @@
 
   <header>
     <div class="hero-bg"></div>
-    <h1 class="reveal">My Minecraft Server Experience</h1>
-    <p class="reveal">By DreamVision – 4+ Years of Minecraft Building & Creativity</p>
+    <h1 class="reveal">Minecraft Server Development Portfolio</h1>
+    <p class="reveal">By DreamVision – 3+ Years of Advanced Minecraft Development & Innovation</p>
   </header>
 
   <section id="about" class="reveal">
     <h2>About Me</h2>
-    <p>I'm <strong>DreamVision</strong>, a Minecraft server developer and community leader. I am the <strong>Owner at NeonStudios</strong>, <strong>Executive at CreeperMC</strong>, <strong>Manager at Crew Gaming YouTubers Discord Server</strong>, and <strong>PvP Developer at ParadiseMC</strong>. With over <strong>4 years of experience</strong> in Minecraft development, server management, and community building, I strive to create high‑quality gameplay experiences and professional server environments.</p>
+    <p>I'm <strong>DreamVision</strong>, a Minecraft server developer and community leader. I am the <strong>Owner at NeonStudios</strong>, <strong>Executive at CreeperMC</strong>, <strong>Manager at Crew Gaming YouTubers Discord Server</strong>, and <strong>PvP Developer at ParadiseMC</strong>. With over <strong>3 years of specialized experience</strong> in Minecraft development, server architecture, and community building, I create high-performance gameplay experiences and enterprise-level server environments.</p>
   </section>
 
   <section id="works" class="reveal">
-    <h2>My Works</h2>
-    <h3>Stunning Builds & Creations</h3>
+    <h2>My Development Projects</h2>
+    <h3>Advanced Server Infrastructure & Systems</h3>
     <ul>
-      <li>A majestic castle with intricate details and tall grand towers.</li>
-      <li>A beautiful medieval-style village with cozy houses.</li>
-      <li>An exciting roller coaster going through scenic landscapes.</li>
-      <li>Custom mobs, redstone contraptions, and more!</li>
+      <li>Custom server architecture with optimized performance and scalability</li>
+      <li>Advanced plugin development with custom APIs and integrations</li>
+      <li>Multi-proxy network implementation with seamless player experience</li>
+      <li>Custom anti-cheat systems and server security frameworks</li>
     </ul>
     <div class="gallery">
-      <div class="card reveal"><img src="assets/gallery/build1.png" alt="Minecraft Build 1"></div>
-      <div class="card reveal"><img src="assets/gallery/build2.png" alt="Minecraft Build 2"></div>
-      <div class="card reveal"><img src="assets/gallery/build3.png" alt="Minecraft Build 3"></div>
-      <div class="card reveal"><img src="assets/gallery/build4.png" alt="Minecraft Build 4"></div>
-      <div class="card reveal"><img src="assets/gallery/build5.png" alt="Minecraft Build 5"></div>
+      <div class="card reveal"><img src="https://i.imgur.com/7Q1q8Jj.png" alt="Server Architecture"></div>
+      <div class="card reveal"><img src="https://i.imgur.com/9Z8Z5Z5.png" alt="Plugin Development"></div>
+      <div class="card reveal"><img src="https://i.imgur.com/3QZJ3yE.png" alt="Network Systems"></div>
+      <div class="card reveal"><img src="https://i.imgur.com/1A2B3C4.png" alt="Security Framework"></div>
+      <div class="card reveal"><img src="https://i.imgur.com/5D6E7F8.png" alt="Custom APIs"></div>
     </div>
   </section>
 
   <section id="skills" class="reveal">
-    <h2>My Developer Skills</h2>
+    <h2>My Development Expertise</h2>
     <div class="skills">
       <span>Java Plugin Development</span>
       <span>Spigot/Bukkit API</span>
       <span>Velocity/Waterfall Proxy</span>
-      <span>Linux Server Admin</span>
+      <span>Linux Server Administration</span>
       <span>Pterodactyl Panel</span>
       <span>MySQL & Redis</span>
       <span>Anti-Cheat Systems</span>
       <span>Team Leadership & Community Building</span>
+      <span>Server Architecture</span>
+      <span>Performance Optimization</span>
+      <span>Custom API Development</span>
+      <span>Network Security</span>
     </div>
   </section>
 
   <section id="socials" class="reveal">
-    <h2>Follow Me on Socials</h2>
+    <h2>Connect With Me</h2>
     <ul class="socials">
       <li>YouTube: <a href="https://www.youtube.com/@dreamvision148" target="_blank">DreamVision148</a></li>
       <li>Instagram: <a href="https://instagram.com/ig_dreamvision0" target="_blank">@ig_dreamvision0</a></li>
@@ -659,8 +715,14 @@
 
   <section id="thanks" class="reveal">
     <h2>Thank You!</h2>
-    <p>Thank you for viewing my Minecraft portfolio! With 4+ years of building and creativity, I'm excited to continue creating more amazing Minecraft experiences.</p>
+    <p>Thank you for exploring my Minecraft development portfolio! With 3+ years of technical expertise and innovation, I'm passionate about pushing the boundaries of what's possible in Minecraft server development.</p>
   </section>
+
+  <!-- Image Modal -->
+  <div class="modal" id="imageModal">
+    <span class="close-modal">&times;</span>
+    <img class="modal-content" id="modalImage">
+  </div>
 
   <div id="backToTop">▲</div>
 
@@ -746,6 +808,63 @@
         heroBg.style.transform = `translateY(${scrolled * 0.5}px)`;
       }
     });
+    
+    // Image Modal Functionality
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    const closeModal = document.querySelector('.close-modal');
+    
+    // Add click events to all gallery images
+    document.querySelectorAll('.card img').forEach(img => {
+      img.addEventListener('click', function() {
+        modal.classList.add('active');
+        modalImg.src = this.src;
+        document.body.style.overflow = 'hidden'; // Prevent scrolling
+      });
+    });
+    
+    // Close modal when clicking X
+    closeModal.addEventListener('click', function() {
+      modal.classList.remove('active');
+      document.body.style.overflow = 'auto'; // Re-enable scrolling
+    });
+    
+    // Close modal when clicking outside the image
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+    });
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+    });
+    
+    // Enhanced typing effect for header
+    const headerText = "Minecraft Server Development Portfolio";
+    const headerElement = document.querySelector('header h1');
+    
+    // Only run if we have the header element
+    if (headerElement) {
+      let i = 0;
+      const typeWriter = () => {
+        if (i < headerText.length) {
+          headerElement.innerHTML = headerText.substring(0, i+1) + '<span class="cursor">|</span>';
+          i++;
+          setTimeout(typeWriter, 100);
+        } else {
+          headerElement.innerHTML = headerText;
+        }
+      };
+      
+      // Start typing effect after a short delay
+      setTimeout(typeWriter, 1000);
+    }
   </script>
 </body>
 </html>
