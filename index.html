@@ -1,246 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Minecraft Server Name]</title>
-    <link rel="icon" type="image/png" href="media/favicon.png">
-    <link rel="stylesheet" href="media/style.css">
-    <link href="https://fonts.bunny.net/css?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DreamVision - Minecraft Portfolio</title>
+  <!-- Favicon -->
+  <link rel="icon" href="https://yt3.googleusercontent.com/ytc/AGIKgqOa8F1yqPpGAFpkGF2E1VlzDqgW8sELpAo-VPqd=s176-c-k-c0x00ffffff-no-rj" type="image/x-icon">
+
+  <!-- CSS Styles -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <nav class="desktop_navbar">
-      <a href="#"><img class="desktop_navbar_logo_img" src="media/logo_small.png" alt="logo"></a>
-      <a href="https://wiki.example.com/" class="desktop_navbar_link">Wiki</a>
-      <a href="#discord" class="desktop_navbar_link scroll">Community</a>
-      <a href="#about" class="desktop_navbar_link scroll">About Us</a>
-      <div class="desktop_navbar_link2_div">
-          <a href="#join" class="desktop_navbar_link2 scroll">Join Us!</a>
-      </div>
-    </nav>
-    <div class="mobile_navbar">
-      <a href="#" class="mobile_navbar_logo_img_a"><img class="mobile_navbar_logo_img" src="media/logo_small.png" alt="logo"></a>
-      <div id="mobile_navbar_links">
-          <a class="mobile_navbar_link" onclick="mobile_navbar_link_hider()" href="https://wiki.example.com/">Wiki</a>
-          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#discord">Community</a>
-          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#about">About Us</a>
-          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#join">Join Us</a>
-        </div>
-        <div class="icon" onclick="mobile_navbar_link_hider()">
-            <i class="fa fa-bars"></i>
-        </div>
-        <script>
-            function mobile_navbar_link_hider() {
-            var x = document.getElementById("mobile_navbar_links");
-            if (x.style.display === "flex") {
-                x.style.display = "none";
-            } else {
-                x.style.display = "flex";
-            }
-            } 
-        </script>
+  <nav>
+    <img src="https://yt3.googleusercontent.com/ytc/AGIKgqOa8F1yqPpGAFpkGF2E1VlzDqgW8sELpAo-VPqd=s176-c-k-c0x00ffffff-no-rj" alt="Logo" style="height:40px;width:40px;border-radius:50%;margin-right:15px;">
+    <h1>DreamVision</h1>
+    <div>
+      <a href="#about">About</a>
+      <a href="#works">Works</a>
+      <a href="#skills">Skills</a>
+      <a href="#socials">Socials</a>
+      <a href="#thanks">Thanks</a>
     </div>
-    <div class="mainflex">
-      <div class="main1">
-        <a class="main1_logo_a" href="#">
-          <img class="main1_logo" src="media/logo.png" alt="logo">
-        </a>
-        <div class="main1_description">
-          <a>Minecraft,<br>like</a>
-          <a class="main1_actcent">already done before</a><a>.</a>
-        </div>
-        <div class="main1_ipcopier_div">
-          <button class="main1_ipcopier" onclick="copyText()" type="button">
-            <span class="main1_ipcopier_text1">play.example.com</span>
-            <br>
-            <span class="main1_ipcopier_text2">Click to copy</span>
-          </button>
-          <script>
-            function copyText() {
-                navigator.clipboard.writeText
-            ("play.example.com");
-                }
-            $(document).ready(function() {
-            $('.main1_ipcopier').click(function() {
-                var popup = $('<div>', { class: 'main1_popup' })
-                .append($('<h3 class="copy_confirm">').text('Copied IP to clipboard'))
-                $(this).after(popup);
-                setTimeout(function() {
-                popup.remove();
-                }, 1000);
-            });
-            });
-        </script>
-        </div>
-        <a href="#more" class="scroll">
-          <img alt="downarrow" class="main1_downarrow" src="media/downarrow.png">
-        </a>
-        <script>
-          const scrollLinks = document.querySelectorAll('.scroll');
-          scrollLinks.forEach(function(link) {
-            link.addEventListener('click', function(event) {
-              event.preventDefault();
-              const target = document.querySelector(link.getAttribute('href'));
-              const offsetTop = target.offsetTop;
-              window.scrollTo({
-                top: offsetTop,
-                behavior: 'smooth'
-              });
-            });
-          });
-        </script>
-      </div>
-      <div id="more"></div>
-      <div class="main2">
-        <a class="headline">What we have</a>
-        <div class="main2_features_div">
-          <div class="main2_feature">
-            <img class="main2_feature_img" alt="Feature Image" src="media/placeholder.png">
-            <a class="main2_feature_headline">Feature 1</a>
-            <a class="main2_feature_text">Feature description</a>
-          </div>
-          <div class="main2_feature">
-            <img class="main2_feature_img" alt="Feature Image" src="media/placeholder.png">
-            <a class="main2_feature_headline">Feature 2</a>
-            <a class="main2_feature_text">Feature description</a>
-          </div>
-          <div class="main2_feature">
-            <img class="main2_feature_img" alt="Feature Image" src="media/placeholder.png">
-            <a class="main2_feature_headline">Feature 3</a>
-            <a class="main2_feature_text">Feature description</a>
-          </div>
-          <div class="main2_feature">
-            <img class="main2_feature_img" alt="Feature Image" src="media/placeholder.png">
-            <a class="main2_feature_headline">Feature 4</a>
-            <a class="main2_feature_text">Feature description</a>
-          </div>
-          <div class="main2_feature">
-            <img class="main2_feature_img" alt="Feature Image" src="media/placeholder.png">
-            <a class="main2_feature_headline">Feature 5</a>
-            <a class="main2_feature_text">Feature description</a>
-          </div>
-        </div>
-      </div>
-      <div id="discord"></div>
-      <div class="main4">
-        <a class="headline">Join the Discord</a>
-        <div class="main4_dc_div">
-          <iframe class="main4_dc_widget" src="https://imgur.com/78RPeUY.png" width="350" height="500" title="discord" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-          <div class="main4_dc_description_div">
-            <a class="main4_dc_description_title">Let's talk!</a>
-            <a class="main4_dc_description"> ・Meet other players <br> ・Ask questions <br> ・Get notified about updates <br> ・Give feedback  <br><br> &amp; more </a>
-            <a href="https://discord.gg/INVITE" class="main4_dc_button_a">
-              <div class="main4_dc_button">Join</div>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div id="about"></div>
-      <div class="main5">
-        <a class="headline">Who we are</a>
-        <div class="main5_admin_div">
-          <div class="main5_admins_div main5_admins_dev_type2">
-            <img class="main5_admins_img" alt="admin member img" src="media/member_placeholder.webp">
-            <div class="main5_admins_description_div">
-              <a class="main5_admins_description_rank main5_admins_description_rank_owner">[Owner]</a>
-              <a class="main5_admins_description_title" href="https://example.com">Owner Name</a>
-              <a class="main5_admins_description">Owner<br>Minecraft Content Creator. Does live Streams of Creepermc. Plays Game there!</a>
-            </div>
-          </div>
-          <div class="main5_admins_div main5_admins_dev_type1">
-            <img class="main5_admins_img" alt="admin member img" src="media/member_placeholder.webp">
-            <div class="main5_admins_description_div">
-              <a class="main5_admins_description_rank main5_admins_description_rank_admin">[Admin]</a>
-              <a class="main5_admins_description_title" href="https://example.com">Admin Name</a>
-              <a class="main5_admins_description">Admin<br>Head of all management team. Manages the server. Developes the server.</a>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div id="about"></div>
-      <div class="main5">
-        <div class="main5_admin_div">
-          <div class="main5_admins_div main5_admins_dev_type2">
-            <img class="main5_admins_img" alt="admin member img" src="media/member_placeholder.webp">
-            <div class="main5_admins_description_div">
-              <a class="main5_admins_description_rank main5_admins_description_rank_owner">[Owner]</a>
-              <a class="main5_admins_description_title" href="https://example.com">Owner Name</a>
-              <a class="main5_admins_description">Owner<br>Minecraft Content Creator. Does live Streams of Creepermc. Plays Game there!</a>
-            </div>
-          </div>
-        <div class="main5_supporter_div">
-          <div class="main5_supporters_div">
-            <img class="main5_supporters_img" alt="supporters member img" src="media/member_placeholder.webp">
-            <div class="main5_supporters_description_div">
-              <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">[Supporter]</a>
-              <a class="main5_supporters_description_title">Replacable Supporter 1</a>
-              <a class="main5_supporters_description">Supporter<br>Description</a>
-            </div>
-          </div>
-          <div class="main5_supporters_div">
-            <img class="main5_supporters_img" alt="supporters member img" src="media/member_placeholder.webp">
-            <div class="main5_supporters_description_div">
-              <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">[Supporter]</a>
-              <a class="main5_supporters_description_title">Replacable Supporter 2</a>
-              <a class="main5_supporters_description">Supporter<br>Description</a>
-            </div>
-          </div>
-          <div class="main5_supporters_div">
-            <img class="main5_supporters_img" alt="supporters member img" src="media/member_placeholder.webp">
-            <div class="main5_supporters_description_div">
-              <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">[Supporter]</a>
-              <a class="main5_supporters_description_title">Replacable Supporter 3</a>
-              <a class="main5_supporters_description">Supporter<br>Description</a>
-            </div>
-          </div>
-          <div class="main5_supporters_div">
-            <img class="main5_supporters_img" alt="supporters member img" src="media/member_placeholder.webp">
-            <div class="main5_supporters_description_div">
-              <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">[Supporter]</a>
-              <a class="main5_supporters_description_title">Replacable Supporter 4</a>
-              <a class="main5_supporters_description">Supporter<br>Description</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="join"></div>
-      <div class="main3">
-        <a class="headline">How to join</a>
-        <div class="main3_join_div_div">
-          <div class="main3_join_div">
-            <a class="main3_join_title">Java</a>
-            <div class="main3_join_content_div">
-              <div class="main3_join_categories">
-                <a>IP:</a>
-                <a>Version:</a>
-              </div>
-              <div class="main3_join_values">
-                <a>Play.Creepermc.IN</a>
-                <a>1.13 - 1.21.5</a>
-              </div>
-            </div>
-          </div>
-          <div class="main3_join_div">
-            <a class="main3_join_title">Bedrock</a>
-            <div class="main3_join_content_div">
-              <div class="main3_join_categories">
-                <a>IP:</a>
-                <a>Port:</a>
-              </div>
-              <div class="main3_join_values">
-                <a>Play.CreeperMC.in</a>
-                <a>7001</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+  </nav>
+
+  <header>
+    <h1 class="reveal">My Minecraft Server Experience</h1>
+    <p class="reveal">By DreamVision – 4+ Years of Minecraft Building & Creativity</p>
+  </header>
+
+  <section id="about" class="reveal">
+    <h2>About Me</h2>
+    <p>I'm <strong>DreamVision</strong>, a Minecraft server developer and community leader. I am the <strong>Owner at NeonStudios</strong>, <strong>Executive at CreeperMC</strong>, <strong>Manager at Crew Gaming YouTubers Discord Server</strong>, and <strong>PvP Developer at ParadiseMC</strong>. With over <strong>4 years of experience</strong> in Minecraft development, server management, and community building, I strive to create high‑quality gameplay experiences and professional server environments.</p>
+  </section>
+
+  <section id="works" class="reveal">
+    <h2>My Works</h2>
+    <h3>Stunning Builds & Creations</h3>
+    <ul>
+      <li>A majestic castle with intricate details and tall grand towers.</li>
+      <li>A beautiful medieval-style village with cozy houses.</li>
+      <li>An exciting roller coaster going through scenic landscapes.</li>
+      <li>Custom mobs, redstone contraptions, and more!</li>
+    </ul>
+    <div class="gallery">
+      <div class="card reveal"><img src="https://cdn.discordapp.com/attachments/1339128062184390713/1377308653136384070/image.png"></div>
+      <div class="card reveal"><img src="https://cdn.discordapp.com/attachments/1339128062184390713/1377308688997421147/image.png"></div>
+      <div class="card reveal"><img src="https://cdn.discordapp.com/attachments/1339128062184390713/1377308718622052555/image.png"></div>
+      <div class="card reveal"><img src="https://cdn.discordapp.com/attachments/1339128062184390713/1377309934290735295/image.png"></div>
+      <div class="card reveal"><img src="https://cdn.discordapp.com/attachments/1339128062184390713/1377309978917998756/image.png"></div>
     </div>
-    <footer class="copyright_div">
-      <a href="https://github.com/FQQD/MCServer-Web-Template" class="copyright">Made by FQQD 2023 - Edited by [Name] [Year]</a>
-    </footer>
-  </body>
+  </section>
+
+  <section id="skills" class="reveal">
+    <h2>My Developer Skills</h2>
+    <div class="skills">
+      <span>Java Plugin Development</span>
+      <span>Spigot/Bukkit API</span>
+      <span>Velocity/Waterfall Proxy</span>
+      <span>Linux Server Admin</span>
+      <span>Pterodactyl Panel</span>
+      <span>MySQL & Redis</span>
+      <span>Anti-Cheat Systems</span>
+      <span>Team Leadership & Community Building</span>
+    </div>
+  </section>
+
+  <section id="socials" class="reveal">
+    <h2>Follow Me on Socials</h2>
+    <ul class="socials">
+      <li>YouTube: <a href="https://www.youtube.com/@dreamvision148" target="_blank">DreamVision148</a></li>
+      <li>Instagram: <a href="https://instagram.com/ig_dreamvision0" target="_blank">@ig_dreamvision0</a></li>
+      <li>Discord Server: <a href="https://discord.com/invite/epKb8Rcwzc" target="_blank">Join Here</a></li>
+    </ul>
+  </section>
+
+  <section id="thanks" class="reveal">
+    <h2>Thank You!</h2>
+    <p>Thank you for viewing my Minecraft portfolio! With 4+ years of building and creativity, I'm excited to continue creating more amazing Minecraft experiences.</p>
+  </section>
+
+  <div id="backToTop">▲</div>
+
+  <script src="scripts.js"></script>
+</body>
 </html>
